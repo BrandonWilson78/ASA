@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_background_shade_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/myToolbar"
+        layout="@layout/layout_toolabr_terms" />
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/imageView5"
+        android:layout_below="@+id/myToolbar"
+        android:layout_marginBottom="@dimen/margin_from_wall_16dp"
+        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+        android:layout_marginRight="@dimen/margin_from_wall_16dp"
+        android:layout_marginTop="@dimen/margin_from_wall_16dp"
+        android:elevation="@dimen/elevation_button"
+
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_square_terms"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+
+                android:paddingBottom="@dimen/margin_from_wall_16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:clipToPadding="false"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_from_wall_8dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/img_plus_post_new_ads"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:backgroundTint="@color/colorPrimary"
+                            android:clickable="true"
+                            android:elevation="@dimen/elevation_button"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/terms_condition_img" />
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_2dp"
+                        android:background="@android:color/darker_gray"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/terms_privacy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Terms and Conditions"
+                        android:textColor="@color/black_90"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_post_new_ads"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_from_wall_8dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_32dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Privacy Policy"
+                        android:textColor="@color/black_90"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/txt_post_new_ads_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginEnd="@dimen/margin_from_wall_8dp"
+                    android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                    android:layout_marginStart="@dimen/margin_from_wall_8dp"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:lineSpacingExtra="2px"
+                    android:padding="5sp"
+                    android:text="@string/dummy_text"
+                    android:textColor="@color/black_90"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="normal" />
+
+                <View
+                    android:id="@+id/view_seprator"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                    android:background="@color/color_white" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

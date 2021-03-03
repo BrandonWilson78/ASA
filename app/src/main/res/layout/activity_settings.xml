@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/myToolbar"
+        layout="@layout/layout_toolbar_user_section_setting" />
+
+
+    <TextView
+        android:id="@+id/txt_your_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myToolbar"
+        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+        android:layout_marginStart="@dimen/margin_from_wall_16dp"
+        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+        android:text="Notifications"
+        android:textAllCaps="false"
+        android:textColor="@color/black_90"
+        android:textSize="@dimen/text_size_17sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/linear_payment_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_your_history"
+        android:layout_marginTop="@dimen/margin_from_wall_32dp"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="@dimen/margin_from_wall_32dp"
+                android:text="Turn on notifications"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <Switch
+                android:id="@+id/switch_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/margin_from_wall_32dp"
+                android:checked="false"
+                android:textOff="Off"
+                android:textOn="On" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/last_space"
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:layout_below="@+id/linear_payment_list" />
+
+    <View
+        android:id="@+id/seprator"
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_below="@+id/last_space"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="32dp"
+        android:background="@color/color_black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seprator"
+        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/margin_from_wall_32dp"
+                android:checked="false"
+                android:textOff="Off"
+                android:textOn="On" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="@dimen/margin_from_wall_32dp"
+                android:text="Turn on push notifications for message box"
+                android:textSize="@dimen/text_size_15sp" />
+
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

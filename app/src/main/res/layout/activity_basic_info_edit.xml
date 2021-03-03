@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/new_app_blue_color">
+
+        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+            android:id="@+id/textview_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_arrow_back"
+            android:onClick="goBackk"
+            android:padding="@dimen/margin_from_wall_16dp"
+            android:text=""
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_17sp"
+            android:textStyle="bold" />
+
+        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="Edit Profile"
+            android:textColor="@color/color_white"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/color_white"
+            android:elevation="@dimen/margin_from_wall_4dp"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/place_autocomplete_fragment"
+                android:name="za.asa_media.awesome_sa.customizedfragment.CustomizedPlaceFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible" />
+        </android.support.v7.widget.CardView>
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_linear"
+        android:background="@drawable/n_bg_white_lines"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <RelativeLayout
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/color_background_shade_gray">
+
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floating_button_image_select"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/img_profile_buisness"
+                    android:layout_alignEnd="@+id/img_profile_buisness"
+                    android:layout_alignRight="@+id/img_profile_buisness"
+                    android:clickable="true"
+                    android:src="@drawable/ic_camera"
+                    android:tint="@color/color_white"
+                    app:backgroundTint="@color/new_app_blue_color"
+                    app:elevation="6dp"
+                    app:fabSize="mini"
+                    app:pressedTranslationZ="12dp"
+                    app:rippleColor="@color/gray_btn_bg_color" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/img_profile_buisness"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/drawer_image" />
+
+                <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                    android:id="@+id/textview_full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_profile_buisness"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:text=""
+                    android:textColor="@color/new_app_gray_dark"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textview_username_header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/view1"
+                android:background="@color/new_app_blue_color"
+                android:gravity="center|left"
+                android:paddingBottom="@dimen/margin_from_wall_8dp"
+                android:paddingLeft="@dimen/margin_from_wall_16dp"
+                android:paddingStart="@dimen/margin_from_wall_16dp"
+                android:paddingTop="@dimen/margin_from_wall_8dp"
+                android:text="PERSONAL PROFILE"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_15sp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_username_header"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_from_wall_8dp"
+                android:paddingRight="@dimen/margin_from_wall_8dp"
+                android:paddingTop="@dimen/margin_from_wall_8dp">
+
+
+                <!--<ImageView
+                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5sp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:clickable="true"
+                android:elevation="@dimen/elevation_button"
+                android:src="@drawable/ic_google_map" />-->
+                <LinearLayout
+                    android:id="@+id/li1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/text_first"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".4"
+                        android:text="First Name"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_first_name"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:hint="First name"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_below="@+id/li1"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:background="@color/color_background_shade_gray" />
+
+
+                <LinearLayout
+                    android:id="@+id/li2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view2"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/text_last"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".4"
+                        android:text="Last Name"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_last_name"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:hint="Last name"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_below="@+id/li2"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <LinearLayout
+                    android:id="@+id/li3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view3"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/text_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".4"
+                        android:text="Date of Birth"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/edittext_basic_info_birth_date"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:hint="Date of Birth"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_below="@+id/li3"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <LinearLayout
+                    android:id="@+id/li4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view4"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/text_City"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".4"
+                        android:text="City"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/edittext_basic_info_city"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:hint="Enter City"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_below="@+id/li4"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:background="@color/color_background_shade_gray" />
+
+
+                <LinearLayout
+                    android:id="@+id/li5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view5"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/text_Country"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".4"
+                        android:text="Country"
+
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/edittext_basic_info_country"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:hint="Enter Country"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_below="@+id/li5"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <LinearLayout
+                    android:id="@+id/li6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view6"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_phone_number"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_weight=".4"
+
+                        android:text="Phone Number"
+
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/edittext_basic_info_phone_number"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:hint="Enter Phone No"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textview_business_profile_info_header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="@color/new_app_blue_color"
+                android:gravity="center|left"
+                android:paddingBottom="@dimen/margin_from_wall_8dp"
+                android:paddingLeft="@dimen/margin_from_wall_16dp"
+                android:paddingStart="@dimen/margin_from_wall_16dp"
+                android:paddingTop="@dimen/margin_from_wall_8dp"
+                android:text="BUSINESS PROFILE"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_15sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout_business_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_business_profile_info_header"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_from_wall_8dp"
+                android:paddingRight="@dimen/margin_from_wall_8dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+
+                        android:text="Business Name"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_business_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:clickable="true"
+                        android:drawableRight="@mipmap/arrow_down_18"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:paddingRight="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="Demo name"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+
+                        android:text="Business Category"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_business_category_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:clickable="true"
+                        android:drawableRight="@mipmap/arrow_down_18"
+                        android:focusable="false"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:paddingRight="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="Demo category"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:text="Street Address"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_street_address_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="48, 2nd ave calare, cape town"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+
+                        android:text="Country"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_business_country_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="South africa"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:text="State"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_state_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="Cape town"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:text="Pin Code"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_pin_code_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="23454"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+
+                        android:text="Business Contact"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_business_contact_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:inputType="phone"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="+198978675460"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="visible"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:text="Web Address"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_web_address_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="http://www.sakurarestaurant.com"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+            </LinearLayout>
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textview_social_info_header"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/linearLayout_business_profile"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="@color/new_app_blue_color"
+                android:gravity="center|left"
+                android:paddingBottom="@dimen/margin_from_wall_8dp"
+                android:paddingLeft="@dimen/margin_from_wall_16dp"
+                android:paddingStart="@dimen/margin_from_wall_16dp"
+                android:paddingTop="@dimen/margin_from_wall_8dp"
+                android:text="SOCIAL INFORMATION (OPTIONAL)"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_15sp"
+                android:visibility="visible" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout_social_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textview_social_info_header"
+                android:background="@color/color_white"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_from_wall_16dp"
+                android:paddingRight="@dimen/margin_from_wall_16dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:paddingLeft="5sp"
+                        android:text="Facebook"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_facebook_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text="facebook.com/sakura123"
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:paddingLeft="5sp"
+                        android:text="Google page link"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_google_page_link_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:fontFamily="sans-serif"
+                        android:paddingLeft="5sp"
+                        android:text="Instagram"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_instagram_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1pt"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@color/color_background_shade_gray" />
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_8dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".4"
+                        android:paddingLeft="5sp"
+                        android:text="Youtube channel"
+                        android:textColor="@color/new_app_gray_text"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                        android:id="@+id/textview_youtube_link_value"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_weight=".6"
+                        android:background="@drawable/new_round_edt_text"
+                        android:gravity="left|center"
+                        android:paddingLeft="@dimen/margin_from_wall_8dp"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/new_app_gray_dark"
+                        android:textSize="@dimen/text_size_15sp" />
+
+                </LinearLayout>
+
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_from_wall_16dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_button_container"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignLeft="@+id/linearLayout2"
+                android:layout_alignStart="@+id/linearLayout2"
+                android:layout_below="@+id/linearLayout_social_info"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                    android:id="@+id/btn_basic_info_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_from_wall_16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/layout_button_round"
+                    android:elevation="@dimen/elevation_button"
+                    android:gravity="center"
+                    android:text="Cancel"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_17sp"
+                    android:visibility="gone" />
+
+                <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                    android:id="@+id/btn_basic_info_done"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="@dimen/margin_from_wall_32dp"
+                    android:layout_marginLeft="@dimen/margin_from_wall_32dp"
+                    android:layout_marginRight="@dimen/margin_from_wall_32dp"
+                    android:layout_marginStart="@dimen/margin_from_wall_32dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/new_round_button_blue"
+                    android:elevation="@dimen/elevation_button"
+                    android:text="Save"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_17sp" />
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/linear_button_container" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

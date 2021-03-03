@@ -1,0 +1,1030 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_setting_in_store_setting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/frame_street_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/header"
+        android:background="@color/color_background_shade_gray"
+        android:elevation="@dimen/elevation_button">
+
+        <!-- Street view at 0 -->
+        <RelativeLayout
+            android:id="@+id/frame_street_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/street_view_fragmentt"
+                    android:name="com.google.android.gms.maps.SupportStreetViewPanoramaFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <ImageView
+                    android:id="@+id/imageView_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_margin="@dimen/margin_from_wall_32dp"
+                    android:src="@mipmap/p_br_b60" />
+
+                <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="@dimen/margin_from_wall_32dp"
+                    android:background="@drawable/new_round_button_blue"
+                    android:clickable="true"
+                    android:gravity="left"
+                    android:padding="@dimen/margin_from_wall_4dp"
+                    android:text="   STREET VIEW      "
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_11sp"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+        </RelativeLayout>
+        <!--  Map View at 1-->
+        <RelativeLayout
+            android:id="@+id/frame_map"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:elevation="@dimen/elevation_button"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <fragment
+                    android:id="@+id/map"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <ImageView
+                    android:id="@+id/imageView_phone_map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center"
+                    android:layout_margin="@dimen/margin_from_wall_32dp"
+                    android:src="@mipmap/p_br_b60" />
+
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+    </ViewFlipper>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frame_street_map"
+        android:layout_above="@+id/linear_direction"
+        android:fillViewport="true"
+        android:scrollbarSize="@dimen/scrollbar_width">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rel_renew_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:elevation="@dimen/elevation_button"
+                    android:padding="@dimen/margin_from_wall_8dp"
+                    android:visibility="gone">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_free_add_trial"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+                        android:layout_marginStart="@dimen/margin_from_wall_8dp"
+                        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                        android:layout_toLeftOf="@+id/btn_renew_plan"
+                        android:layout_toStartOf="@+id/btn_renew_plan"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:text="30 Days Free Ad Trail: Active"
+                        android:textColor="@color/new_app_gray_dark" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_free_add_expires"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textview_free_add_trial"
+                        android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+                        android:layout_marginStart="@dimen/margin_from_wall_8dp"
+                        android:layout_toLeftOf="@+id/btn_renew_plan"
+                        android:layout_toStartOf="@+id/btn_renew_plan"
+                        android:gravity="left|center"
+                        android:maxLines="1"
+                        android:text="EXPIRES: 01-04-2018"
+                        android:textColor="@color/new_app_gray_text" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                        android:id="@+id/btn_renew_plan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                        android:background="@drawable/new_round_button_blue"
+                        android:text="    RENEW PLAN    "
+                        android:textColor="@color/color_white" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_purchase_add_plan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_white"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_from_wall_8dp"
+                    android:visibility="visible">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                        android:id="@+id/btn_purchase_plan"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="@dimen/margin_from_wall_32dp"
+                        android:layout_marginRight="@dimen/margin_from_wall_32dp"
+                        android:background="@drawable/new_round_button_blue"
+                        android:text="PURCHASE ADVERTISING PLAN"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/text_size_13sp" />
+
+                </LinearLayout>
+            </FrameLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:fillViewport="true"
+                android:paddingLeft="@dimen/margin_from_wall_2dp"
+                android:paddingRight="@dimen/margin_from_wall_2dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/badges"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/new_round_place_detail"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/batch_img_place_detail_special"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/margin_from_wall_8dp"
+                            android:src="@drawable/grey_specials"
+                            android:visibility="visible" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/batch_text_place_detail_special"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/batch_gray_color"
+
+                            android:gravity="center"
+                            android:text="Specials"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_from_wall_2dp"
+                        android:background="@drawable/new_round_place_detail"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/batch_img_place_detail_events"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/margin_from_wall_8dp"
+                            android:src="@drawable/grey_events"
+                            android:visibility="visible" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/batch_text_place_detail_events"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/batch_gray_color"
+                            android:gravity="center"
+                            android:text="Events"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_from_wall_2dp"
+                        android:background="@drawable/new_round_place_detail"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/batch_img_place_detail_promotion"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/margin_from_wall_8dp"
+                            android:src="@drawable/grey_promotions"
+                            android:visibility="visible" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/batch_text_place_detail_promotion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/batch_gray_color"
+
+                            android:gravity="center"
+                            android:text="Promotions"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_from_wall_2dp"
+                        android:background="@drawable/new_round_place_detail"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/batch_img_place_detail_news"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/margin_from_wall_8dp"
+                            android:src="@drawable/grey_news"
+                            android:visibility="visible" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/batch_text_place_detail_news"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/batch_gray_color"
+
+                            android:gravity="center"
+                            android:text="News"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_from_wall_2dp"
+                        android:background="@drawable/new_round_place_detail"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/batch_img_place_detail_catalog"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_margin="@dimen/margin_from_wall_8dp"
+                            android:src="@drawable/grey_catalog"
+                            android:visibility="visible" />
+
+                        <android.support.v4.widget.Space
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/margin_from_wall_8dp" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/batch_text_place_detail_catalog"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/batch_gray_color"
+
+                            android:gravity="center"
+                            android:text="Catalogue"
+                            android:textColor="@color/color_white"
+                            android:textSize="@dimen/text_size_13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view_nearby_places"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="#ffffff"
+                android:elevation="@dimen/elevation_button"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_from_wall_4dp"
+                    android:layout_marginRight="@dimen/margin_from_wall_4dp"
+                    android:background="@drawable/new_round_place_detail"
+                    android:elevation="@dimen/elevation_button"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_marginTop="10dp">
+
+                        <View
+                            android:id="@+id/center_line"
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/margin_from_wall_16dp"
+                            android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                            android:background="@color/batch_gray_color" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/text_place_detail_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+                            android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                            android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                            android:layout_toLeftOf="@+id/center_line"
+                            android:layout_toStartOf="@+id/center_line"
+
+                            android:gravity="left"
+                            android:text="ADDRESS"
+                            android:textColor="@color/black_90"
+                            android:textSize="14dp" />
+
+                        <Space
+                            android:id="@+id/imagespace"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@id/linear" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/textview_phone_number_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                            android:layout_marginStart="@dimen/margin_from_wall_16dp"
+                            android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                            android:layout_toEndOf="@+id/center_line"
+                            android:layout_toRightOf="@+id/center_line"
+                            android:gravity="left|center"
+                            android:maxLines="1"
+                            android:text="PHONE"
+                            android:textColor="@color/new_app_gray_text" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/textview_phone_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textview_phone_number_heading"
+                            android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                            android:layout_marginStart="@dimen/margin_from_wall_16dp"
+                            android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                            android:layout_toEndOf="@+id/center_line"
+                            android:layout_toRightOf="@+id/center_line"
+                            android:gravity="left|center"
+                            android:maxLines="1"
+                            android:text="N/A"
+                            android:textColor="@color/new_app_blue_color"
+                            android:textSize="@dimen/text_size_17sp" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/textview_site_link_heading"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/textview_phone_number"
+                            android:layout_alignStart="@+id/textview_phone_number"
+
+                            android:layout_below="@+id/textview_phone_number"
+                            android:layout_marginTop="@dimen/margin_from_wall_24dp"
+
+                            android:gravity="center|start|left"
+                            android:maxLines="1"
+                            android:text="WEBSITE"
+                            android:textColor="@color/new_app_gray_text" />
+
+                        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                            android:id="@+id/textview_site_link"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignLeft="@+id/textview_phone_number"
+                            android:layout_alignStart="@+id/textview_phone_number"
+                            android:layout_below="@+id/textview_site_link_heading"
+                            android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                            android:gravity="center|start|left"
+                            android:maxLines="1"
+                            android:text="N/A"
+                            android:textColor="@color/new_app_blue_color" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/line_below_address_web_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginBottom="@dimen/margin_from_wall_16dp"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_marginRight="@dimen/margin_from_wall_16dp"
+                        android:background="@color/batch_gray_color" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/text_open_now"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="@dimen/margin_from_wall_16dp"
+                        android:drawablePadding="@dimen/margin_from_wall_16dp"
+                        android:drawableRight="@mipmap/arrow_down_18"
+                        android:gravity="center"
+                        android:text="Hours: Open now"
+                        android:textColor="@color/batch_gray_color" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:id="@+id/linear_opening_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_from_wall_4dp"
+                android:layout_marginRight="@dimen/margin_from_wall_4dp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="@drawable/new_round_place_detail"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:elevation="@dimen/elevation_button" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".3"
+
+                        android:text="Monday"
+                        android:textColor="@color/black_90" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_monday_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".7"
+
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textColor="@color/black_90" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:padding="2dp">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".3"
+
+                        android:text="Tuesday"
+                        android:textColor="@color/black_90" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_tuesday_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".7"
+
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textColor="@color/black_90" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".3"
+
+                        android:text="Wednesday"
+                        android:textColor="@color/black_90" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_wednesday_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".7"
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textColor="@color/black_90" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".3"
+
+                        android:text="Thursday"
+                        android:textColor="@color/black_90" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_thursday_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".7"
+
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textColor="@color/black_90" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".3"
+                        android:text="Friday"
+                        android:textColor="@color/black_90" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_friday_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".7"
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textColor="@color/black_90" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".3"
+                        android:text="Saturday"
+                        android:textColor="@color/black_90" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_saturday"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".7"
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textColor="@color/black_90" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="2dp"
+                    android:weightSum="1">
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textview_phone_number"
+                        android:layout_alignStart="@+id/textview_phone_number"
+
+                        android:layout_gravity="left"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".3"
+
+                        android:text="Sunday"
+                        android:textColor="@color/black_90" />
+
+                    <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                        android:id="@+id/textview_sunday_value"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textview_phone_number"
+                        android:layout_alignStart="@+id/textview_phone_number"
+
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                        android:layout_weight=".7"
+                        android:gravity="left"
+                        android:text="N/A"
+                        android:textColor="@color/black_90" />
+
+                </LinearLayout>
+
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:elevation="@dimen/elevation_button" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/margin_from_wall_4dp"
+                android:layout_marginRight="@dimen/margin_from_wall_4dp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="@drawable/new_round_place_detail">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycle_photo_place_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:scrollbars="none"
+                    android:visibility="visible" />
+
+                <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                    android:id="@+id/txt_place_imag_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/new_round_button_blue"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="@dimen/margin_from_wall_8dp"
+                    android:text="No Google Images are Found"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/txt_social_heading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_btn_bg_color"
+                android:clickable="true"
+                android:gravity="left"
+                android:padding="@dimen/margin_from_wall_8dp"
+                android:text="Follow us on"
+                android:textAllCaps="true"
+                android:textColor="@color/black_90"
+                android:textSize="@dimen/text_size_15sp"
+
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:elevation="@dimen/elevation_button"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp"
+                    android:elevation="@dimen/elevation_button" />
+
+                <LinearLayout
+                    android:id="@+id/social_icon_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/social_fb"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/social_fb"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/social_insta"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/social_instagram"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/social_share"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/youtube"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/social_whtsapp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/social_whatsapp"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/social_google"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/social_gogle"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <android.support.v4.widget.Space
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+            </LinearLayout>
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_btn_bg_color"
+                android:clickable="true"
+                android:gravity="left"
+                android:padding="@dimen/margin_from_wall_8dp"
+                android:text="OPENING HOURS"
+                android:textColor="@color/black_90"
+                android:textSize="@dimen/text_size_15sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_white"
+                android:elevation="@dimen/elevation_button"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+
+                <ImageView
+                    android:id="@+id/soc"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                    android:clickable="true"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/social_google_write" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@color/gray_btn_bg_color"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rating_review_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_from_wall_4dp"
+                android:layout_marginRight="@dimen/margin_from_wall_4dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/new_round_place_detail"
+                android:paddingBottom="@dimen/margin_from_wall_16dp"
+                android:paddingTop="@dimen/margin_from_wall_16dp">
+
+                <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                    android:id="@+id/text_place_detail_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/ratingbar_place_detail_"
+                    android:layout_toStartOf="@+id/ratingbar_place_detail_"
+
+                    android:gravity="center"
+                    android:text="0.0"
+                    android:textColor="@color/new_app_blue_color"
+                    android:textSize="@dimen/text_size_17sp" />
+
+                <RatingBar
+                    android:id="@+id/ratingbar_place_detail_"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                    android:layout_marginStart="@dimen/margin_from_wall_16dp"
+                    android:rating="0"
+                    android:theme="@style/MyRatingBarBlue"
+                    android:visibility="visible" />
+
+                <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                    android:id="@+id/text_place_detail_google_near_rating_arrow_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                    android:layout_marginStart="@dimen/margin_from_wall_16dp"
+                    android:layout_toEndOf="@+id/ratingbar_place_detail_"
+                    android:layout_toRightOf="@+id/ratingbar_place_detail_"
+                    android:drawableRight="@mipmap/arrow_down_18"
+
+                    android:gravity="center"
+                    android:textColor="@color/new_app_gray_text"
+                    android:textSize="@dimen/text_size_15sp" />
+
+                <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                    android:id="@+id/text_place_detail_google_reviews_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ratingbar_place_detail_"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+
+                    android:gravity="center"
+                    android:text="0 Google reviews"
+                    android:textColor="@color/new_app_gray_text"
+                    android:textSize="@dimen/text_size_15sp" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recycle_reviews_place_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_from_wall_4dp"
+                android:layout_marginRight="@dimen/margin_from_wall_4dp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:scrollbars="none"
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_direction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/new_app_gray_dark"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+            android:id="@+id/map_link"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="N/A"
+            android:textColor="@color/color_white"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/img_compass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@mipmap/map_36"
+            android:visibility="visible" />
+
+        <za.asa_media.awesome_sa.support.custom_views.AppTextView
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="GET DIRECTIONS"
+            android:textColor="@color/color_white"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

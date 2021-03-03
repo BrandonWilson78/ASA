@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\Snow-Dell-05\.android\build-cache\8f43317d3d46d2a74403ffb81a36c400551c41f9\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.3"
+        sha1="cb100e0d1029146512605f99d8a5e193d3cb05d2">
+        <dex dex="D:\snow_works\awesome_africa\ASA\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_497680acffd2e1065d16bb440a127d101c508d7d\classes.dex" />
+    </item>
+
+</items>

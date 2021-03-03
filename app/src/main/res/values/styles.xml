@@ -1,0 +1,114 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/BarStyle</item>
+        <item name="android:textColorSecondary">@color/color_white</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+    <!--   <item name="android:actionOverflowButtonStyle">@style/MyActionButtonOverflow</item> -->
+    </style>
+
+
+    <style name="AppThemeRatingBar" parent="Theme.AppCompat">
+        <item name="ratingBarStyle">@style/MyRatingBar</item>
+    </style>
+
+
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="android:textColorSecondary">@color/new_app_gray_text</item>
+
+    </style>
+
+    <style name="MyRatingBarBlue" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorAccent">@color/new_app_blue_color</item>
+        <item name="android:textColorSecondary">@color/new_app_gray_text</item>
+
+    </style>
+
+
+
+    <style name="BarStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="MyTheme" parent="android:Theme.Holo.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:windowBackground">@color/color_transparent</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/color_transparent</item>
+        <item name="android:bottomDark">@color/color_transparent</item>
+        <item name="android:bottomMedium">@color/color_transparent</item>
+        <item name="android:centerBright">@color/color_transparent</item>
+        <item name="android:centerDark">@color/color_transparent</item>
+        <item name="android:centerMedium">@color/color_transparent</item>
+        <item name="android:fullBright">@color/color_transparent</item>
+        <item name="android:fullDark">@color/color_transparent</item>
+        <item name="android:topBright">@color/color_transparent</item>
+        <item name="android:topDark">@color/color_transparent</item>
+    </style>
+
+    <style name="TextLabel" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/color_background_shade_gray</item>
+        <item name="android:textSize">@dimen/text_size_17sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/color_white</item>
+        <item name="colorControlNormal">@color/color_white</item>
+        <item name="colorControlActivated">@color/color_white</item>
+
+    </style>
+
+
+    <style name="TextLabel2" parent="TextAppearance.AppCompat">
+        <!-- Hint color and label color in FALSE state -->
+        <item name="android:textColorHint">@color/black_90</item>
+        <item name="android:textSize">@dimen/text_size_15sp</item>
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorAccent">@color/colorPrimaryDark</item>
+        <item name="colorControlNormal">@color/colorPrimaryDark</item>
+        <item name="colorControlActivated">@color/colorPrimaryDark</item>
+
+    </style>
+
+    <!-- Animation for dialog box -->
+    <style name="DialogSlideAnim" parent="@android:style/Theme.Dialog">
+        <item name="android:windowAnimationStyle">@style/DialogAnimation</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_in_down</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_up</item>
+        <item name="android:background">@color/color_white</item>
+    </style>
+
+
+    <!-- Style to replace actionbar overflow icon. set item 'android:actionOverflowButtonStyle' in AppTheme -->
+    <style name="MyActionButtonOverflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <!--<item name="android:src">@drawable/ic_launcher</item>-->
+      <!--  <item name="android:background">?android:attr/actionBarItemBackground</item>-->
+
+     <!--<item name="android:textColorSecondary">@color/color_white</item>-->
+       <!-- <item name="android:contentDescription">"Lala"</item>-->
+
+    </style>
+
+
+</resources>

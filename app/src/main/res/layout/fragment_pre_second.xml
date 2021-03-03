@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!--  <TextView
+          android:id="@+id/text_top"
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginTop="80dp"
+          android:fontFamily="sans-serif"
+          android:gravity="center_horizontal"
+          android:text="ARE YOU A GOOGLE LISTED BUSINESS?\n\nADVERTISE ON CITIOCULUS\nFREE 30 DAY TRAIL\nTHEN $99 PER YEAR"
+          android:textColor="@color/colorPrimaryDark"
+          android:textSize="@dimen/text_size_17sp"
+         android:drawableTop="@drawable/pre_one"
+          android:textStyle="bold" />-->
+
+    <ImageView
+        android:id="@+id/batc"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+        android:scaleType="centerInside"
+        android:padding="@dimen/margin_from_wall_24dp"
+        android:src="@drawable/pre3"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linear_badges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/batc"
+        android:layout_marginTop="@dimen/margin_from_wall_4dp"
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_from_wall_16dp"
+        android:paddingRight="@dimen/margin_from_wall_16dp"
+        android:visibility="visible"
+        android:weightSum="4">
+
+        <ImageView
+            android:id="@+id/batch_img_special"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:src="@drawable/specials"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/batch_img_events"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+
+            android:src="@drawable/events"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/batch_img_promotion"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:src="@drawable/promotions"
+            android:visibility="visible" />
+
+
+        <ImageView
+            android:id="@+id/batch_img_news"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+
+            android:src="@drawable/news"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/batch_img_catalog"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight=".6"
+            android:src="@drawable/catalog"
+            android:visibility="visible" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

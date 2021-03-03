@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/n_bg_white_lines">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/center_line"
+                android:layout_width=".1pt"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true" />
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="center"
+                android:src="@drawable/icon_with_text" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="@dimen/margin_from_wall_16dp"
+                android:layout_marginRight="@dimen/margin_from_wall_16dp"
+                android:layout_marginTop="@dimen/margin_from_wall_24dp"
+                android:layout_toLeftOf="@+id/center_line"
+                android:layout_toStartOf="@+id/center_line"
+                android:text="Sign up"
+                android:textColor="@color/new_app_gray_text"
+                android:textSize="@dimen/text_size_17sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/m_one"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/imageView8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+                android:layout_marginStart="@dimen/margin_from_wall_16dp"
+                android:layout_marginTop="@dimen/margin_from_wall_24dp"
+                android:layout_toEndOf="@+id/center_line"
+                android:layout_toRightOf="@+id/center_line"
+                android:background="@mipmap/round_gray_18"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/new_app_gray_text" />
+
+            <View
+                android:id="@+id/m_line"
+                android:layout_width="20dp"
+                android:layout_height="@dimen/margin_from_wall_2dp"
+                android:layout_below="@+id/imageView8"
+                android:layout_marginTop="@dimen/margin_from_wall_32dp"
+                android:layout_toEndOf="@+id/m_one"
+                android:layout_toRightOf="@+id/m_one"
+                android:background="@color/new_app_gray_text" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/m_two"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_below="@+id/imageView8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_from_wall_24dp"
+                android:layout_toEndOf="@+id/m_line"
+                android:layout_toRightOf="@+id/m_line"
+                android:background="@mipmap/round_brown_18"
+                android:gravity="center"
+                android:text="2"
+                android:textColor="@color/color_white" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView9"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_from_wall_32dp"
+                android:layout_marginRight="@dimen/margin_from_wall_32dp"
+                android:orientation="vertical">
+
+                <!-- First name -->
+                <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                    android:id="@+id/edt_business_category_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                    android:background="@drawable/new_round_edt_text"
+                    android:clickable="true"
+                    android:drawableRight="@mipmap/arrow_down_18"
+                    android:focusable="false"
+                    android:hint="Select Business Category"
+                    android:inputType="textPersonName"
+                    android:paddingEnd="@dimen/margin_from_wall_16dp"
+                    android:paddingLeft="@dimen/margin_from_wall_8dp"
+                    android:paddingRight="@dimen/margin_from_wall_16dp"
+                    android:paddingStart="@dimen/margin_from_wall_8dp"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_size_15sp" />
+
+                <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                    android:id="@+id/m_text_register_business"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView8"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                    android:gravity="center"
+                    android:text="Select your Google Registered Business"
+                    android:textColor="@color/new_app_gray_text" />
+
+                <!-- last name -->
+                <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                    android:id="@+id/edt_business_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin_from_wall_4dp"
+                    android:background="@drawable/new_round_edt_text"
+                    android:clickable="true"
+                    android:drawableLeft="@drawable/places_ic_search"
+                    android:focusable="false"
+                    android:hint="Business Name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_size_15sp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/color_white"
+                    android:elevation="@dimen/margin_from_wall_4dp"
+                    android:visibility="gone">
+
+                    <fragment
+                        android:id="@+id/place_autocomplete_fragment"
+                        android:name="za.asa_media.awesome_sa.customizedfragment.CustomizedPlaceFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="visible" />
+                </android.support.v7.widget.CardView>
+                <!-- Email id -->
+                <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                    android:id="@+id/edt_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                    android:background="@drawable/new_round_edt_text"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left|top"
+                    android:hint="My Business Name\nAddress\n\nPhoneNumber\nWebsite link"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/color_black"
+                    android:textSize="@dimen/text_size_15sp" />
+
+
+            </LinearLayout>
+
+            <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                android:id="@+id/btn_signup"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@+id/linear_fields"
+                android:layout_alignLeft="@+id/linear_fields"
+                android:layout_alignRight="@+id/linear_fields"
+                android:layout_alignStart="@+id/linear_fields"
+                android:layout_below="@+id/linear_fields"
+                android:layout_marginTop="@dimen/margin_from_wall_24dp"
+                android:background="@drawable/new_round_button_blue"
+                android:elevation="@dimen/elevation_button"
+                android:gravity="center"
+                android:text="SIGN UP"
+                android:textColor="@color/color_white" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/textView11" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/txt_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/btn_signup"
+                android:layout_alignStart="@+id/btn_signup"
+                android:layout_below="@+id/btn_signup"
+                android:layout_marginTop="23dp"
+                android:text="Already have an account"
+                android:textColor="@color/color_white"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

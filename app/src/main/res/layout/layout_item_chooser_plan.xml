@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clipToPadding="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_from_wall_8dp"
+    android:paddingLeft="@dimen/margin_from_wall_8dp"
+    android:paddingRight="@dimen/margin_from_wall_8dp">
+
+    <!--  one month subscription -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/color_white"
+        android:elevation="@dimen/elevation_button"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/radio_month_subscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/new_app_gray_dark"
+            android:gravity="center"
+            android:textColor="#333"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_month_subscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linear_category_container"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/linear_category_container"
+            android:paddingLeft="3sp"
+            android:tag="textview_subscription_type"
+            android:text="1 Month Subscription"
+            android:textColor="@color/black_90"
+            android:textSize="@dimen/text_size_15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linear_category_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txt_month_subscription"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center_vertical"
+            android:weightSum="1">
+
+            <TextView
+
+                android:id="@+id/txt_categories_month"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="All Categories"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/text_size_15sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_price_month_subscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_month_subscription"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="@dimen/margin_from_wall_8dp"
+            android:layout_marginRight="@dimen/margin_from_wall_8dp"
+            android:tag="subscription_cost"
+            android:text="$30"
+            android:textColor="@color/color_black"
+            android:textSize="@dimen/text_size_17sp"
+
+            android:textStyle="bold" />
+
+        <Space
+            android:id="@+id/space_below_all_categories"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/linear_category_container" />
+
+        <LinearLayout
+            android:id="@+id/linear_batch_collection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/linear_category_container"
+            android:layout_alignStart="@+id/linear_category_container"
+            android:layout_below="@+id/space_below_all_categories"
+            android:layout_marginTop="@dimen/margin_from_wall_8dp"
+            android:layout_toEndOf="@+id/txt_month_subscription"
+            android:clipToPadding="false"
+            android:elevation="@dimen/elevation_button"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="@dimen/margin_from_wall_8dp"
+            android:visibility="visible"
+            android:weightSum="5">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/batch_img_catalog"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/catalog"
+                    android:tag="batch_img_news" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Catalogue"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/batch_img_events_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/events"
+                    android:tag="batch_img_events" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Event"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/batch_img_promotion_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/promotions"
+                    android:tag="batch_img_promotion" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Promotion"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/batch_img_special_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/specials"
+                    android:tag="batch_img_special" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Special"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/batch_img_news_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:src="@drawable/news"
+                    android:tag="batch_img_news" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="News"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

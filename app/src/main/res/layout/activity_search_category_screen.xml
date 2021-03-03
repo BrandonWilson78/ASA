@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/top_search"
+        layout="@layout/layout_bottom_view_main_screen"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_search_category"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/top_search"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

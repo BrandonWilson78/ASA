@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/item_view_user"
+        android:title="User View" />
+    <item
+        android:id="@+id/item_view_business"
+        android:title="Business View" />
+
+
+</menu>

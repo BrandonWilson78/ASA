@@ -1,0 +1,62 @@
+<resources>
+
+    <string name="app_name1">CitiOculus</string>
+    <string name="api_key">AIzaSyDOM5wTOgj9wreSSTiNzhD8PjPJ4VLBu8A</string>
+
+    <!-- AIzaSyDqU_fxoOR918cAbYTHCsOeRIQ_QETFkbY    -->
+    <string name="api_key_google_map">AIzaSyD7FNAtHuU_tnU4kVBfxUzG2Ps2u9NU9GQ</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="dummy_text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,</string>
+
+    <!-- navigation drawer strings  -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+
+    <!-- Navigation Drawer menu labels -->
+    <string name="nav_home">HOME</string>
+    <string name="nav_profile">PROFILE</string>
+    <string name="nav_photos">PURCHASE PLAN</string>
+    <string name="nav_movies">MY ADS</string>
+    <string name="nav_notifications">NOTIFICATIONS</string>
+    <string name="nav_settings">TRANSACTION HISTORY</string>
+    <string name="terms">TERMS AND CONDITIONS</string>
+    <string name="nav_about_us">ABOUT US</string>
+    <string name="logout">LOGOUT</string>
+
+    <!-- Toolbar titles when navigation menu item is selected -->
+    <string-array name="nav_item_activity_titles">
+        <item></item>
+        <item>My Profile</item>
+        <item>Purchase Plan</item>
+        <item>My Ads</item>
+        <item>Notifications</item>
+        <item>Transaction History</item>
+
+
+    </string-array>
+
+    <string name="activity_title_about_us">About Us</string>
+    <string name="activity_title_privacy_policy">Privacy Policy</string>
+    <string name="action_clear_all">Clear All</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_mark_all_read">Mark All as Read</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="title_activity_logged_in_user_dashboard"></string>
+
+    <string name="action_settings">Settings</string>
+
+
+    <!-- card variables used for the payment -->
+    <string name="purchase">Purchase</string>
+    <string name="valid">Form is valid</string>
+    <string name="invalid">Form is invalid</string>
+    <string name="light_theme_form">Light Theme</string>
+    <string name="dark_theme_form">Dark Theme</string>
+    <string name="scan_with_card_io">Scan with card.io</string>
+    <string name="email_send_text">Enter your email address below to receive reset password instructions.</string>
+
+</resources>

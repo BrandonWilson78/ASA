@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/n_bg_white_lines">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width=".1pt"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/img_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="@dimen/margin_from_wall_8dp"
+        android:layout_marginRight="@dimen/margin_from_wall_8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/pre2"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/img_pre_one_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_"
+        android:layout_marginEnd="@dimen/margin_from_wall_8dp"
+        android:layout_marginRight="@dimen/margin_from_wall_8dp"
+        android:layout_toLeftOf="@+id/img_pre_one"
+        android:layout_toStartOf="@+id/img_pre_one"
+        android:src="@mipmap/round_brown_18" />
+
+    <ImageView
+        android:id="@+id/img_pre_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_"
+        android:layout_marginEnd="@dimen/margin_from_wall_4dp"
+        android:layout_marginRight="@dimen/margin_from_wall_4dp"
+        android:layout_toLeftOf="@+id/v1"
+        android:layout_toStartOf="@+id/v1"
+        android:src="@mipmap/round_gray_18" />
+
+    <ImageView
+        android:id="@+id/img_pre_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_"
+        android:layout_marginLeft="@dimen/margin_from_wall_4dp"
+        android:layout_marginStart="@dimen/margin_from_wall_4dp"
+        android:layout_toEndOf="@+id/v1"
+        android:layout_toRightOf="@+id/v1"
+        android:src="@mipmap/round_gray_18" />
+
+    <ImageView
+        android:id="@+id/img_pre_two_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_"
+        android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+        android:layout_marginStart="@dimen/margin_from_wall_8dp"
+        android:layout_toEndOf="@+id/img_pre_two"
+        android:layout_toRightOf="@+id/img_pre_two"
+        android:src="@mipmap/round_gray_18" />
+
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/img_"
+        android:layout_marginTop="@dimen/margin_from_wall_16dp"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textView9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_from_wall_24dp"
+                android:gravity="center_horizontal"
+                android:text="CONTINUE TO"
+                android:textColor="@color/new_app_gray_text"
+                android:textSize="@dimen/text_size_17sp"
+                android:textStyle="bold" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                android:id="@+id/btn_user"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textView9"
+                android:layout_marginEnd="@dimen/margin_from_wall_32dp"
+                android:layout_marginLeft="@dimen/margin_from_wall_32dp"
+                android:layout_marginRight="@dimen/margin_from_wall_32dp"
+                android:layout_marginStart="@dimen/margin_from_wall_32dp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="@drawable/new_round_button_primary_color"
+                android:gravity="center"
+                android:text="FIND PLACES"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/txt_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn_user"
+                android:layout_marginTop="1dp"
+                android:gravity="center_horizontal"
+                android:padding="5sp"
+                android:text="Find awesome businesses, hangouts, and things to do near you!"
+                android:textColor="@color/color_white"
+                android:visibility="gone" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                android:id="@+id/btn_business"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@+id/btn_user"
+                android:layout_alignRight="@+id/btn_user"
+                android:layout_alignStart="@+id/btn_user"
+                android:layout_below="@+id/btn_user"
+                android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                android:background="@drawable/new_round_button_blue"
+                android:gravity="center"
+                android:text="BUSINESS PORTAL"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/txt_broadcast_africa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/btn_business"
+                android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+                android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="How to register on your Business on Google"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/txt_broadcast_africa" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginBottom="@dimen/margin_from_wall_8dp"
+                android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                android:src="@drawable/powered_by_google_light" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

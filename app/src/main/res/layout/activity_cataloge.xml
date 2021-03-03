@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/batch_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/batch_catalogue_color"
+        android:clipToPadding="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Catalogue"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_17sp" />
+
+        <ImageView
+            android:id="@+id/img_header_cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:elevation="@dimen/elevation_button"
+            android:src="@drawable/img_cross"
+            android:tint="@color/gray_btn_bg_color" />
+
+        <ImageView
+            android:id="@+id/img_header_edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/img_header_cancel"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:padding="@dimen/margin_from_wall_8dp"
+            android:src="@drawable/ic_edit"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/include"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/batch_toolbar"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+                android:id="@+id/linear_layout_colors"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/batch_special_color" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/batch_event_color" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/batch_promotion_color" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/batch_news_color" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="2dp"
+                    android:layout_weight="1"
+                    android:background="@color/batch_catalogue_color" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_batches"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_layout_colors"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:clipToPadding="true"
+                android:orientation="horizontal"
+                android:padding="2dp"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/batch_special"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/grey_specials" />
+
+                <ImageView
+                    android:id="@+id/batch_event"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/grey_events" />
+
+                <ImageView
+                    android:id="@+id/batch_promotion"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/grey_promotions" />
+
+                <ImageView
+                    android:id="@+id/batch_news"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/grey_news" />
+
+                <ImageView
+                    android:id="@+id/batch_catalogue"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/catalog" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout_info_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linear_layout_batches"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <View
+                    android:id="@+id/view_left_side_item_bar"
+                    android:layout_width="5dp"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txt_nearby_place_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/linearLayout"
+                        android:layout_alignStart="@+id/linearLayout"
+                        android:layout_toLeftOf="@+id/ratingBar_nearby"
+                        android:text="The Bombay Bicyle Club"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/txt_nearby_place_name"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_vertical">
+
+                        <View
+                            android:id="@+id/status_view"
+                            android:layout_width="7dp"
+                            android:layout_height="7dp"
+                            android:background="@drawable/red_circle" />
+
+                        <TextView
+
+                            android:id="@+id/txt_nearby_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4dp"
+                            android:text="CLOSED"
+                            android:textColor="#ff0000"
+                            android:textSize="@dimen/text_size_13sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/linearLayout"
+                        android:layout_marginTop="6dp"
+                        android:orientation="horizontal">
+
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="14dp"-->
+                        <!--android:layout_height="14dp"-->
+
+                        <!--android:layout_marginLeft="20dp"-->
+                        <!--android:src="@drawable/placeholder_"-->
+                        <!--android:background="#000000"/>-->
+
+                        <TextView
+                            android:id="@+id/txt_nearby_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:text="Village Balongi, Phase 7, Industrial Area, Balongi, Sahibzada Ajit Singh Nagar, Punjab 140301, India"
+                            android:textColor="@android:color/darker_gray"
+                            android:textSize="12sp"
+                            android:textStyle="normal" />
+                    </LinearLayout>
+
+                    <RatingBar
+                        android:id="@+id/ratingBar_nearby"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="23dp"
+                        android:layout_marginRight="23dp"
+                        android:progressBackgroundTint="@color/colorPrimaryDark"
+                        android:progressTint="@color/colorPrimaryDark"
+                        android:rating="5"
+                        android:secondaryProgressTint="@color/colorPrimaryDark" />
+
+                    <TextView
+                        android:id="@+id/txt_nearby_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/linear"
+                        android:layout_alignEnd="@+id/ratingBar_nearby"
+                        android:layout_alignRight="@+id/ratingBar_nearby"
+                        android:text="2.5km"
+                        android:textColor="@color/color_black"
+                        android:textSize="@dimen/text_size_13sp"
+                        android:textStyle="normal" />
+
+                    <Space
+                        android:id="@+id/imagespace"
+                        android:layout_width="match_parent"
+                        android:layout_height="12dp"
+                        android:layout_below="@id/linear" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/relative_image_show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/linear_layout_info_card">
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/batch_news_color" />
+
+                <ImageView
+                    android:id="@+id/image_batch_layout"
+                    android:layout_width="270dp"
+                    android:layout_height="180dp"
+                    android:layout_centerHorizontal="true"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/catalog_banner"
+                    android:visibility="visible" />
+
+                <View
+                    android:layout_width="20dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/batch_special_color" />
+
+                <TextView
+                    android:id="@+id/txt_special_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/image_batch_layout"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:text="Special Name:Bombay 2017 Summer Sale"
+                    android:textColor="@color/batch_catalogue_color"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_desc_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_image_show"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <TextView
+                android:id="@+id/txt_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txt_desc_heading"
+                android:layout_marginEnd="20dp"
+
+                android:layout_marginRight="20dp"
+
+                android:layout_toEndOf="@+id/txt_desc_heading"
+                android:layout_toRightOf="@+id/txt_desc_heading"
+                android:gravity="left" />
+
+            <RelativeLayout
+                android:id="@+id/linear_voucher_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_desc_heading"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_start_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date:"
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/txt_start_heading"
+                    android:layout_toRightOf="@+id/txt_start_heading"
+                    android:text="1 May 2017"
+                    android:textColor="#6b6969" />
+
+                <TextView
+                    android:id="@+id/txt_end_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_start_heading"
+                    android:layout_marginTop="5dp"
+                    android:text="End Date:"
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_start_heading"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/txt_end_heading"
+                    android:layout_toRightOf="@+id/txt_end_heading"
+                    android:text="1 May 2017"
+                    android:textColor="#6b6969" />
+
+                <TextView
+                    android:id="@+id/txt_voucher_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_end_heading"
+                    android:layout_marginTop="5dp"
+                    android:text="Voucher/PromoCode:"
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_end_heading"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/txt_voucher_heading"
+                    android:layout_toRightOf="@+id/txt_voucher_heading"
+                    android:text=" #BOMBAYSUM17"
+                    android:textColor="@color/batch_catalogue_color"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/contact_heading"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/txt_description"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="#d3d3d3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="20dp"
+                    android:text="CONTACTS"
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/place_personal_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/contact_heading"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_email_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Email: "
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_email_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_toEndOf="@+id/txt_email_heading"
+                    android:layout_toRightOf="@+id/txt_email_heading"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#6b6969" />
+
+                <TextView
+                    android:id="@+id/txt_Website_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_email_heading"
+                    android:layout_marginTop="5dp"
+                    android:text="Website: "
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_website_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_email_heading"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/txt_Website_heading"
+                    android:layout_toRightOf="@+id/txt_Website_heading"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#6b6969" />
+
+                <TextView
+                    android:id="@+id/txt_Landline_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Website_heading"
+                    android:layout_marginTop="5dp"
+                    android:text="Landline: "
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_landline_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Website_heading"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/txt_Landline_heading"
+                    android:layout_toRightOf="@+id/txt_Landline_heading"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#6b6969"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_Mobile_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Landline_heading"
+                    android:layout_marginTop="5dp"
+                    android:text="Mobile: "
+                    android:textColor="#dd000000"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_mobile_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_Landline_heading"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toEndOf="@+id/txt_Mobile_heading"
+                    android:layout_toRightOf="@+id/txt_Mobile_heading"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="#6b6969"
+                    android:textStyle="bold" />
+
+
+            </RelativeLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:layout_below="@+id/place_personal_info" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/layout_footer_catalogue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

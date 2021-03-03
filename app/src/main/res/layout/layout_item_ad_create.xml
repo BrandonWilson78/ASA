@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_from_wall_4dp"
+        android:layout_marginBottom="@dimen/margin_from_wall_2dp"
+        android:layout_marginLeft="@dimen/margin_from_wall_4dp"
+        android:layout_marginRight="@dimen/margin_from_wall_4dp"
+        android:elevation="@dimen/elevation_button"
+        android:background="@color/cardview_light_background">
+
+        <TextView
+            android:id="@+id/textview_buisness_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:fontFamily="sans-serif"
+            android:text="Buisness Name"
+            android:textColor="@color/black_90"
+            android:textSize="@dimen/text_size_17sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/textview_month_subscription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_buisness_name"
+            android:layout_marginTop="@dimen/margin_from_wall_8dp"
+            android:text="1 Month Subscription"
+            android:textColor="@color/black_90"
+            android:textSize="@dimen/text_size_15sp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/textview_subscription_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textview_buisness_name"
+            android:layout_alignBottom="@+id/textview_buisness_name"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="bottom"
+            android:text="$30"
+            android:textColor="@color/black_90"
+            android:textSize="@dimen/text_size_17sp"
+            android:textStyle="bold|italic" />
+
+        <LinearLayout
+            android:id="@+id/linear_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textview_month_subscription"
+            android:layout_marginTop="@dimen/margin_from_wall_8dp"
+            android:orientation="horizontal"
+            android:weightSum="5">
+
+            <ImageView
+                android:id="@+id/specials_batch"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:elevation="@dimen/elevation_toolbar"
+                android:src="@drawable/specials" />
+
+            <ImageView
+                android:id="@+id/event_batch"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:src="@drawable/events" />
+
+            <ImageView
+                android:id="@+id/promotions_batch"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:src="@drawable/promotions" />
+
+            <ImageView
+                android:id="@+id/news_batch"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:src="@drawable/news" />
+
+            <ImageView
+                android:id="@+id/catalog_batch"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:src="@drawable/catalog" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textview_date_posted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear_1"
+            android:layout_marginTop="@dimen/margin_from_wall_16dp"
+            android:text="Purchased: 15-April-2017"
+            android:textSize="@dimen/text_size_11sp"
+            android:textStyle="italic" />
+
+
+        <TextView
+            android:id="@+id/txt_expiry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/linear_1"
+            android:layout_marginTop="@dimen/margin_from_wall_16dp"
+            android:text="Expiry: 15-June-2017"
+            android:textSize="@dimen/text_size_11sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

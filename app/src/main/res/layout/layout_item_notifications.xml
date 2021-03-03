@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_background_shade_gray"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_nearby_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"
+        android:background="@drawable/ripple_effect"
+        android:focusable="true"
+        card_view:cardCornerRadius="5dp"
+        card_view:cardElevation="@dimen/elevation_button"
+        card_view:cardMaxElevation="@dimen/elevation_toolbar">
+
+        <LinearLayout
+            android:id="@+id/linear_payment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+                android:layout_weight=".90"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/notification_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="15-April-2017 2:00 PM"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="italic|bold" />
+
+                <TextView
+                    android:id="@+id/notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_from_wall_8dp"
+                    android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                    android:fontFamily="sans-serif"
+                    android:text="Subscription plan for 'Ghar ka khana' business is going to expire on 20-May-2017"
+                    android:textSize="@dimen/text_size_15sp" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="@color/color_background_shade_gray" />
+
+</LinearLayout>

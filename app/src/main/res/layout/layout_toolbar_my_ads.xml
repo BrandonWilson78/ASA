@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?actionBarSize"
+    android:background="@color/colorPrimaryDark"
+    android:clipToPadding="true"
+    android:elevation="@dimen/elevation_toolbar"
+    android:minHeight="?attr/actionBarSize"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_back_header"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|left"
+            android:clickable="true"
+            android:elevation="@dimen/elevation_button"
+            android:padding="@dimen/margin_from_wall_8dp"
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/textView_header_center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_from_wall_16dp"
+            android:paddingRight="2dp"
+            android:paddingStart="@dimen/margin_from_wall_16dp"
+            android:text="My Ads"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_17sp"
+            android:visibility="visible" />
+    </FrameLayout>
+
+
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_plain"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_from_wall_32dp"
+        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+        android:layout_marginRight="@dimen/margin_from_wall_16dp"
+        android:layout_marginTop="@dimen/margin_from_wall_32dp"
+        android:background="@drawable/layout_payment_successful"
+        android:elevation="@dimen/elevation_toolbar"
+
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/txt_nearby_place_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_above="@+id/txt_nearby_status"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="center"
+            android:text="Payment Successful"
+            android:textColor="@color/black_90"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+
+            android:id="@+id/txt_nearby_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="129dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="You will receive a notification from\nAwesome Africa about your payment.\nThankyou!"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_above="@+id/txt_nearby_place_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="23dp"
+            card_view:srcCompat="@drawable/check_icon" />
+
+        <ImageView
+            android:id="@+id/img_cross_payment"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginEnd="17dp"
+            android:layout_marginRight="17dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_cancel"
+            android:tint="@android:color/darker_gray"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

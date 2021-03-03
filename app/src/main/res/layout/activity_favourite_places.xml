@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/frame_header"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <ImageView
+            android:id="@+id/img_back_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|left"
+            android:clickable="true"
+            android:padding="@dimen/margin_from_wall_8dp"
+
+            android:scaleType="centerInside"
+            android:src="@mipmap/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif"
+            android:text="Favourite Places"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_17sp" />
+    </FrameLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_view_favourite_place"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/frame_header"
+
+        android:background="@color/color_background_shade_gray"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:paddingTop="@dimen/margin_from_wall_8dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollbars="none" />
+
+</RelativeLayout>

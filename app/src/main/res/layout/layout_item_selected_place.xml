@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view_nearby_places"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+        android:layout_marginRight="@dimen/margin_from_wall_8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        card_view:cardCornerRadius="1dp"
+        card_view:cardElevation="@dimen/elevation_button">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/new_round_category_list"
+            android:paddingBottom="10dp"
+            android:paddingEnd="@dimen/margin_from_wall_8dp"
+            android:paddingLeft="@dimen/margin_from_wall_8dp"
+            android:paddingRight="@dimen/margin_from_wall_8dp"
+            android:paddingStart="@dimen/margin_from_wall_8dp"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:id="@+id/txt_nearby_place_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_from_wall_8dp"
+                android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                android:layout_toLeftOf="@+id/ratingBar_nearby"
+                android:layout_toStartOf="@+id/ratingBar_nearby"
+                android:text="Name of Place"
+                android:textColor="@color/black_90"
+                android:textSize="@dimen/text_size_15sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_nearby_place_name"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:gravity="center_vertical"
+                android:weightSum="1">
+
+                <View
+                    android:id="@+id/view_circle_open_closed"
+                    android:layout_width="7dp"
+                    android:layout_height="7dp"
+                    android:background="@drawable/red_circle" />
+
+                <TextView
+
+                    android:id="@+id/txt_nearby_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4dp"
+                    android:text="N/A"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+
+                <!--<ImageView-->
+                <!--android:layout_width="14dp"-->
+                <!--android:layout_height="14dp"-->
+
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:src="@drawable/placeholder_"-->
+                <!--android:background="#000000"/>-->
+
+                <TextView
+                    android:id="@+id/txt_nearby_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:text="Village Balongi, Phase 7, Industrial Area, Balongi, Sahibzada Ajit Singh Nagar, Punjab 140301, India"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="@dimen/text_size_13sp"
+                    android:textStyle="normal" />
+            </LinearLayout>
+
+            <RatingBar
+                android:id="@+id/ratingBar_nearby"
+                style="@style/MyRatingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:rating="3"
+                android:theme="@style/MyRatingBar" />
+
+            <TextView
+                android:id="@+id/txt_nearby_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/ratingBar_nearby"
+                android:layout_alignRight="@+id/ratingBar_nearby"
+                android:layout_below="@+id/ratingBar_nearby"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:text="2.5 km"
+                android:textColor="@color/black_90"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:id="@+id/imagespace"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:layout_below="@id/linear" />
+
+            <LinearLayout
+                android:id="@+id/linear_badges"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imagespace"
+                android:clipToPadding="false"
+                android:elevation="@dimen/elevation_button"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="5">
+
+                <ImageView
+                    android:id="@+id/batch_img_catalog"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:elevation="@dimen/elevation_button"
+                    android:src="@drawable/catalog"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/batch_img_events"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/events"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/batch_img_special"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/specials"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/batch_img_news"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/news"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/batch_img_promotion"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/promotions"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@+id/card_view_nearby_places" />
+
+</RelativeLayout>

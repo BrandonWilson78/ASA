@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/n_bg_white_lines">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:scaleType="center"
+                android:src="@drawable/icon_with_text" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_from_wall_2dp"
+                android:text="Log In"
+                android:textColor="@color/new_app_gray_text"
+                android:textSize="@dimen/text_size_17sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                android:id="@+id/editText_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/textView9"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/margin_from_wall_32dp"
+                android:layout_marginRight="@dimen/margin_from_wall_32dp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:background="@drawable/new_round_edt_text"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="@dimen/margin_from_wall_8dp"
+                android:paddingStart="@dimen/margin_from_wall_8dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text_size_17sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppEditTextView
+                android:id="@+id/editText_passwordd"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@+id/editText_email"
+                android:layout_alignLeft="@+id/editText_email"
+                android:layout_alignRight="@+id/editText_email"
+                android:layout_alignStart="@+id/editText_email"
+                android:layout_below="@+id/editText_email"
+                android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                android:background="@drawable/new_round_edt_text"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingLeft="@dimen/margin_from_wall_8dp"
+                android:paddingStart="@dimen/margin_from_wall_8dp"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text_size_17sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                android:id="@+id/btn_signIn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@+id/editText_passwordd"
+                android:layout_alignLeft="@+id/editText_passwordd"
+                android:layout_alignRight="@+id/editText_passwordd"
+                android:layout_alignStart="@+id/editText_passwordd"
+                android:layout_below="@+id/editText_passwordd"
+                android:layout_marginTop="@dimen/margin_from_wall_24dp"
+                android:background="@drawable/new_round_button_blue"
+                android:elevation="@dimen/elevation_button"
+                android:gravity="center"
+                android:text="LOG IN"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/txt_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btn_signIn"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:padding="3dp"
+                android:text="Forgot Password? Click here"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppButtonView
+                android:id="@+id/txt_dont_have_account"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignEnd="@+id/btn_signIn"
+                android:layout_alignLeft="@+id/btn_signIn"
+                android:layout_alignRight="@+id/btn_signIn"
+                android:layout_alignStart="@+id/btn_signIn"
+                android:layout_below="@+id/txt_forget_password"
+                android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                android:background="@drawable/new_round_button_gray_dark"
+                android:text="SIGN UP"
+                android:textColor="@color/color_white" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/text_how_to_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_dont_have_account"
+                android:layout_marginLeft="@dimen/margin_from_wall_8dp"
+                android:layout_marginRight="@dimen/margin_from_wall_8dp"
+                android:layout_marginTop="@dimen/margin_from_wall_8dp"
+                android:gravity="center"
+                android:padding="@dimen/margin_from_wall_2dp"
+                android:text="How to Register your Business on Google?"
+                android:textColor="@color/new_app_gray_text"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <za.asa_media.awesome_sa.support.custom_views.AppTextView
+                android:id="@+id/textView11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/btn_signIn"
+                android:layout_alignLeft="@+id/txt_dont_have_account"
+                android:layout_alignRight="@+id/btn_signIn"
+                android:layout_alignStart="@+id/txt_dont_have_account"
+                android:layout_below="@+id/text_how_to_register"
+                android:layout_marginBottom="@dimen/margin_from_wall_4dp"
+                android:layout_marginTop="@dimen/margin_from_wall_16dp"
+                android:gravity="center"
+                android:paddingRight="@dimen/margin_from_wall_4dp"
+                android:text="By creating an account, you agree to CitiOculus's Terms of service privacy Policies and content Policies"
+                android:textColor="@color/new_app_gray_text"
+                android:textSize="@dimen/text_size_15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/textView11" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

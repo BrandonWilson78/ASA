@@ -1,0 +1,410 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="140dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/img_post_add" />
+
+        <TextView
+            android:id="@+id/txt_basic_info"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center|left"
+            android:layout_below="@+id/imageView5"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/new_app_blue_color"
+            android:fontFamily="sans-serif"
+            android:padding="@dimen/margin_from_wall_4dp"
+            android:text="Add Your Business Info"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_17sp"
+            android:textStyle="bold"
+            android:layout_alignRight="@+id/linear_input_text_layout"
+            android:layout_alignEnd="@+id/linear_input_text_layout" />
+
+        <LinearLayout
+            android:id="@+id/linear_input_text_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_basic_info"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <fragment
+                    android:id="@+id/place_autocomplete_fragment"
+                    android:name="za.asa_media.awesome_sa.customizedfragment.CustomizedPlaceFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5pt"
+                android:background="@color/black_comp" />
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/add_business_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:hint="Business Name"
+                        android:textSize="@dimen/text_size_17sp"
+                        android:visibility="visible" />
+                </android.support.design.widget.TextInputLayout>
+            </FrameLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/add_business_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="false"
+                    android:fontFamily="sans-serif"
+                    android:hint="Business Category"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_country"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Country"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_street_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Street Address"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="City"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_state"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="State"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_pin_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Pin Code"
+                    android:inputType="number"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_business_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:maxLength="10"
+                    android:hint="Business Contact number"
+                    android:inputType="phone"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_website_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Website Address"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/last_view1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_from_wall_8dp"
+                android:layout_below="@+id/linear_layout_batches" />
+
+            <TextView
+                android:id="@+id/social_info"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+
+                android:background="@color/new_app_blue_color"
+                android:clickable="true"
+                android:gravity="left|center"
+                android:padding="@dimen/margin_from_wall_8dp"
+                android:text="Social Information (Optional)"
+                android:textAllCaps="true"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/text_size_15sp"
+
+                android:visibility="visible" />
+
+            <!-- information -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/add_facebook_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Facebook Ex: facebook.com/page_name"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/add_twitter_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Twitter page link"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/add_linkdin_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Linkdin page link"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/add_google_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Google page link"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_instagram"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Instagram page link"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/add_youtube_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Youtube channel link"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/add_vimeo_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Vimeo link"
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/add_snapchat_link"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="Snapchat link"
+
+                    android:inputType="text"
+                    android:textSize="@dimen/text_size_17sp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!--
+            instagram
+            youtube
+            vimeo
+            snapchat
+            -->
+
+            <View
+                android:id="@+id/last_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_from_wall_32dp"
+                android:layout_below="@+id/social_info" />
+
+            <!--    android:drawableRight="@mipmap/ic_action_arrow_right"
+                android:drawableTint="@color/color_white" -->
+            <TextView
+                android:id="@+id/txt_continuee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:drawablePadding="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="Continue"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/text_size_17sp"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/last_view_final"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_from_wall_8dp"
+                android:layout_below="@+id/btn_submit" />
+        </LinearLayout>
+
+
+        <!--          android:drawableRight="@mipmap/ic_action_arrow_right"
+                   android:drawableTint="@color/color_white"
+                      android:drawablePadding="5dp"
+             -->
+        <TextView
+            android:id="@+id/txt_continue"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/linear_input_text_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+            android:layout_marginRight="@dimen/margin_from_wall_16dp"
+            android:background="@drawable/new_round_button_blue"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+                   android:text="Continue"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/text_size_17sp"
+            android:layout_marginBottom="@dimen/margin_from_wall_32dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</FrameLayout>

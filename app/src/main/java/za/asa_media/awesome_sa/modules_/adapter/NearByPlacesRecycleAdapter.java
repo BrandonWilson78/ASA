@@ -1,0 +1,100 @@
+package za.asa_media.awesome_sa.modules_.adapter;
+
+import android.app.Activity;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.List;
+
+import za.asa_media.awesome_sa.R;
+import za.asa_media.awesome_sa.modules_.data.InitialValueSetUp;
+import za.asa_media.awesome_sa.modules_.data.NearByPlacesData;
+import za.asa_media.awesome_sa.modules_.place_.callback.MainCallback;
+import za.asa_media.awesome_sa.modules_.place_.MainPresenter;
+import za.asa_media.awesome_sa.modules_.place_.MainScreen;
+
+/**
+ * Created by Snow-Dell-05 on 4/24/2017.
+ */
+
+public class NearByPlacesRecycleAdapter extends RecyclerView.Adapter<NearByPlacesRecycleAdapter.MyViewHolder> {
+    private Activity mContext;
+    private int[] icons_id;
+    private String[] item_heading;
+    private MainPresenter mPresenter;
+    private MainCallback mCallback;
+    private List<NearByPlacesData> mListData;
+
+    public NearByPlacesRecycleAdapter(Activity mContext, List<NearByPlacesData> mListData) {
+        this.mContext = mContext;
+        this.item_heading = item_heading;
+        this.icons_id = icons_id;
+        this.mListData = mListData;
+        mPresenter = new MainPresenter(mContext);
+
+        if (mContext instanceof MainScreen) {
+            mCallback = (MainCallback) mContext;
+        }
+
+    }
+
+
+    @Override
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(mContext).inflate(R.layout.layout_item_gridview_near_places, parent, false);
+        MyViewHolder vh = new MyViewHolder(v);
+        return vh;
+    }
+
+    @Override
+    public void onBindViewHolder(final NearByPlacesRecycleAdapter.MyViewHolder holder, final int position) {
+
+        holder.img_grid_item.setImageResource(mListData.get(position).getDrawableName());
+        holder.txt_heading_grid.setText(mListData.get(position).getPlaceName());
+        holder.img_grid_item.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Toast.makeText(mContext,  "dfddfdfdfd:" , Toast.LENGTH_SHORT).show();
+                // Singleton.getSingletonInstance().setType(holder.txt_heading_grid.getText().toString());
+                InitialValueSetUp.mTypeHeading = mListData.get(position).getPlaceName();
+                InitialValueSetUp.mTypeHeadingForListing = mListData.get(position).getPlaceName();
+                mCallback.getGoogleSearchPlace(mPresenter.getNearByGooglePlaces(mListData.get(position).getPlaceName()));
+            }
+        });
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return mListData.size();
+    }
+
+    // update list with searched data
+    public void updateList(List<NearByPlacesData> list) {
+        mListData = list;
+        notifyDataSetChanged();
+    }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+        ImageView img_grid_item;
+        TextView txt_heading_grid;
+
+
+        public MyViewHolder(View itemView) {
+            super(itemView);
+            init(itemView);
+        }
+
+
+        private void init(View view) {
+            img_grid_item = view.findViewById(R.id.img_near_by_place);
+            txt_heading_grid = view.findViewById(R.id.textview_near_by_place);
+
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background_shade_gray"
+    tools:context="com.asa_media.awesome_sa.za.asa_media.awesome_sa.modules_.registered_users.fragment.NotificationsFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <TextView
+        android:id="@+id/txt_your_notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_from_wall_16dp"
+        android:layout_marginStart="@dimen/margin_from_wall_16dp"
+        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+        android:text="You have not received any notification yet!"
+        android:textColor="#dd000000"
+        android:textSize="@dimen/text_size_17sp"
+        android:textStyle="bold|italic"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lst_notofication"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txt_your_notification"
+        android:layout_marginTop="@dimen/margin_from_wall_8dp"
+        android:background="@color/color_background_shade_gray"
+        android:paddingTop="5sp"
+        card_view:elevation="@dimen/elevation_button"
+        />
+
+    <android.support.v4.widget.Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_from_wall_32dp"
+        android:layout_below="@+id/lst_notofication" />
+
+
+</RelativeLayout>
